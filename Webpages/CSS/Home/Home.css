@@ -222,7 +222,7 @@
 .ProjectFullScreenWidget {
     height: 95%;
     width: 95%;
-    display: flex;
+    display: grid;
     position: fixed;
     top: 2.5%;
     left: 3%;
@@ -240,4 +240,38 @@
 
 .ProjectFullScreenWidget #projectName {
 
+}
+
+#projectExitButton {
+
+}
+
+.projectContent {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 15px;
+}
+
+.projectImageDiv {
+    align-content: center;
+    justify-content: center;
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+.projectImageDiv img {
+    max-height: 50px;
+    max-width: 50px;
+}
+
+.imgButtons {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.projectDesc {
+    display: flex;
+    flex-direction: column;
+    text-wrap: wrap;
+    max-width: 650px;
 }

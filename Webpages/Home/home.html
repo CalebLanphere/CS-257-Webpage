@@ -12,10 +12,10 @@
             <a href="/Webpages/Home/home.html" class="navLinksEnd">Caleb Lanphere</a>
         </div>
         <ul class="navPageLinks">
-            <li><a href="/Webpages/Projects/projects.html">Projects</a></li>
-            <li><a href="/Webpages/Projects/projects.html">About</a></li>
-            <li><a href="/Webpages/Projects/education.html">Education</a></li>
-            <li><a href="/Webpages/Projects/projects.html" class="navLinksEnd">Contact</a></li>
+            <li><a id="projectNav">Projects</a></li>
+            <li><a id="aboutNav">About</a></li>
+            <li><a id="educationNav">Education</a></li>
+            <li><a class="navLinksEnd" id="contactNav">Contact</a></li>
         </ul>
     </nav>
     <header class="homeHeader">
@@ -171,8 +171,26 @@
         <div class="projectNameBox centerContent">
             <h2 id="projectTitle">Design For Understanding</h2>
         </div>
+        <div class="projectContent">
+            <div class="projectDesc">
+                <h4>Classwork: User Experience Design Lab</h4>
+                <p>lorem ipsum</p>
+            </div>
+            <div class="projectImageDiv">
+                <img data-project="DesignForUnderstanding" id="projectImage" src="../Assets/Images/PortfolioWorks/CS-257/DesignForUnderstanding/FinalPersuasiveDesign.png">
+                <div class="imgButtons">
+                    <button id="previousImage"><</button>
+                    <button id="nextImage">></button>
+                </div>
+            </div>
+        </div>
+        <div class="projectExitButton centerContent">
+            <button id="closeProject">Close Project</button>
+        </div>
     </div>
 </body>
 <script src="../Js/Home/HomeSortByModal.js"></script>
 <script src="../Js/Home/ProjectInfoWidget.js"></script>
+<script src="../Js/Home/Navbar.js"></script>
+<script src="../Js/Home/ScrollPhotos.js"></script>
 </html>
