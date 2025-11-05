@@ -75,8 +75,8 @@
 #projectsContainer {
     display: grid;
     padding: 1rem;
-    grid-template-columns: auto auto auto;
-    justify-content: space-between;
+    grid-template-columns: repeat(auto-fit, 350px);
+    justify-content: space-around;
     grid-auto-flow: dense;
     grid-gap: 1rem;
     height: auto;
@@ -154,7 +154,8 @@
 
 #aboutMeParagraph, .aboutMeParagraph, #finalAboutMeParagraph {
     text-wrap: auto;
-    width: 850px;
+    max-width: 850px;
+    width: auto;
     font-size: large;
     padding: 15px;
     border-bottom: solid lightgray;
@@ -244,6 +245,7 @@
     left: 3%;
     background-color: white;
     border-radius: 15px;
+    overflow-y: scroll;
 }
 
 .projectNameBox, .centerContent {
@@ -252,10 +254,6 @@
     justify-content: center;
     width: 100%;
     height: 55px;
-}
-
-.ProjectFullScreenWidget #projectName {
-
 }
 
 .exitProject {
@@ -271,6 +269,7 @@
     background-color: grey;
     border-radius: 5px;
     border: none;
+    margin: 5px;
 }
 
 .exitProject:active {
@@ -282,7 +281,7 @@
 
 .projectContent {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(auto-fit, 500px);
     justify-content: space-between;
     padding: 15px;
 }
@@ -293,8 +292,8 @@
     display: flex;
     flex-direction: column;
     grid-template-rows: auto auto;
-    width: 500px;
-    height: 500px;
+    max-height: 500px;
+    max-width: 500px;
 }
 
 .projectImageDiv img {
@@ -312,7 +311,7 @@
 }
 
 .photoBarButtonRight {
-    width: 25px;
+    width: 35px;
     height: 100px;
     background-color: rgba(137, 0, 0, 0.10);
     color: white;
@@ -323,7 +322,7 @@
 }
 
 .photoBarButtonLeft {
-    width: 25px;
+    width: 35px;
     height: 100px;
     background-color: rgba(137, 0, 0, 0.10);
     color: white;
@@ -379,4 +378,6 @@
 
 .projectLink {
     color: black;
+    text-align: center;
+    margin: 16px;
 }
