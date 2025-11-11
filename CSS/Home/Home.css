@@ -385,3 +385,8 @@
     text-align: center;
     margin: 16px;
 }
+
+.projectInTextLink {
+    color: black;
+    text-align: center;
+}
