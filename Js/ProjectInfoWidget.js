@@ -29,12 +29,31 @@ let previousImage;
 let nextImage;
 let index = 0;
 const imagesToShow = {
+    DesignForCollaboration: ["/Assets/Images/PortfolioWorks/CS-257/DesignForCollaboration/Figma1.png",
+        "/Assets/Images/PortfolioWorks/CS-257/DesignForCollaboration/Figma2.png",
+        "/Assets/Images/PortfolioWorks/CS-257/DesignForCollaboration/Figma3.png",
+        "/Assets/Images/PortfolioWorks/CS-257/DesignForCollaboration/Figma4.png",
+        "/Assets/Images/PortfolioWorks/CS-257/DesignForCollaboration/Figma5.png",
+        "/Assets/Images/PortfolioWorks/CS-257/DesignForCollaboration/Figma6.png",
+        "/Assets/Images/PortfolioWorks/CS-257/DesignForCollaboration/Sketch1.png",
+        "/Assets/Images/PortfolioWorks/CS-257/DesignForCollaboration/Sketch2.png",
+        "/Assets/Images/PortfolioWorks/CS-257/DesignForCollaboration/Sketch3.png",
+        "/Assets/Images/PortfolioWorks/CS-257/DesignForCollaboration/Sketch4.png",
+        "/Assets/Images/PortfolioWorks/CS-257/DesignForCollaboration/Sketch5.png",
+        "/Assets/Images/PortfolioWorks/CS-257/DesignForCollaboration/Sketch6.png",
+        "/Assets/Images/PortfolioWorks/CS-257/DesignForCollaboration/Sketch7.png",
+        "/Assets/Images/PortfolioWorks/CS-257/DesignForCollaboration/Sketch8.png",
+        "/Assets/Images/PortfolioWorks/CS-257/DesignForCollaboration/Sketch9.png",
+        "/Assets/Images/PortfolioWorks/CS-257/DesignForCollaboration/Sketch10.png",
+        "/Assets/Images/PortfolioWorks/CS-257/DesignForCollaboration/Sketch11.png",
+        "/Assets/Images/PortfolioWorks/CS-257/DesignForCollaboration/Sketch12.png"],
     DesignForUnderstanding: ["/Assets/Images/PortfolioWorks/CS-257/DesignForUnderstanding/FinalClearDesign.png",
         "/Assets/Images/PortfolioWorks/CS-257/DesignForUnderstanding/FinalPersuasiveDesign.png"],
     DesignForDimensions: ["/Assets/Images/PortfolioWorks/CS-257/DesignForDimensions/FigmaDesign.png",
         "/Assets/Images/PortfolioWorks/CS-257/DesignForDimensions/BlogSiteSketches/Sketch1.png",
         "/Assets/Images/PortfolioWorks/CS-257/DesignForDimensions/MainPageDesignSketches/Sketch1.png",
-        "/Assets/Images/PortfolioWorks/CS-257/DesignForDimensions/ViewerDesignSketches/Sketch1.png",],
+        "/Assets/Images/PortfolioWorks/CS-257/DesignForDimensions/ViewerDesignSketches/Sketch1.png",
+        "/Assets/Images/PortfolioWorks/CS-257/DesignForDimensions/FigmaCloser.png"],
     DesignOnInterviews: ["/Assets/Images/PortfolioWorks/CS-257/DesignOnInterviews/Sketch1.png",
         "/Assets/Images/PortfolioWorks/CS-257/DesignOnInterviews/Sketch2.png",
         "/Assets/Images/PortfolioWorks/CS-257/DesignOnInterviews/Sketch3.png",
@@ -45,7 +64,15 @@ const imagesToShow = {
         "/Assets/Images/PortfolioWorks/CS-257/DesignOnInterviews/Sketch8.png",],
     TextMeApp: ["/Assets/Images/PortfolioWorks/PersonalProjects/TextMeApplication/TextMeAppIcon.png",
     "/Assets/Images/PortfolioWorks/PersonalProjects/TextMeApplication/TextMeAppLogoLarge.png",
-    "/Assets/Images/PortfolioWorks/PersonalProjects/TextMeApplication/TextMeAppLogoSmall.png"],
+        "/Assets/Images/PortfolioWorks/PersonalProjects/TextMeApplication/TextMeAppScreenshot1.png",
+        "/Assets/Images/PortfolioWorks/PersonalProjects/TextMeApplication/TextMeAppScreenshot2.png",
+        "/Assets/Images/PortfolioWorks/PersonalProjects/TextMeApplication/TextMeAppScreenshot3.png",
+        "/Assets/Images/PortfolioWorks/PersonalProjects/TextMeApplication/TextMeAppScreenshot4.png",
+        "/Assets/Images/PortfolioWorks/PersonalProjects/TextMeApplication/TextMeServerAppScreenshot1.png",
+        "/Assets/Images/PortfolioWorks/PersonalProjects/TextMeApplication/TextMeServerAppScreenshot2.png",
+        "/Assets/Images/PortfolioWorks/PersonalProjects/TextMeApplication/TextMeServerAppScreenshot3.png",
+        "/Assets/Images/PortfolioWorks/PersonalProjects/TextMeApplication/TextMeServerAppScreenshot4.png",
+        "/Assets/Images/PortfolioWorks/PersonalProjects/TextMeApplication/TextMeAppLogoSmall.png",],
     Blockout: ["/Assets/Images/PortfolioWorks/PersonalProjects/Blockout/Blockout1.png",
         "/Assets/Images/PortfolioWorks/PersonalProjects/Blockout/Blockout2.png"],
     RCPZ: ["/Assets/Images/PortfolioWorks/PersonalProjects/RedCell/RedCell1.png",
@@ -83,6 +110,9 @@ function setImageScrollingVars() {
 }
 
 function getCorrectPhotoArray() {
+    if(projectImage.dataset.project === "DesignForCollaboration") {
+        return imagesToShow.DesignForCollaboration;
+    }
     if(projectImage.dataset.project === "DesignForUnderstanding") {
         return imagesToShow.DesignForUnderstanding;
     }
